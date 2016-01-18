@@ -27,7 +27,7 @@ public:
 			osgGA::EventQueue::Events::iterator itr;
 			for (itr = events.begin(); itr != events.end(); ++itr)
 			{
-				osgGA::GUIEventAdapter* event = itr->get();
+				osgGA::GUIEventAdapter* event = dynamic_cast<osgGA::GUIEventAdapter*>(itr->get());
 				if (event->getEventType() == osgGA::GUIEventAdapter::CLOSE_WINDOW)
 				{
 					// We have "peeked" at the event queue for the GraphicsWindow and 
@@ -79,9 +79,11 @@ int main( int argc, char** argv )
 	if (bs.valid())
 	{
 		// Adjust view to object view
+      /* This caused a problem with the head tracking on the Vive
 		osg::Vec3 modelCenter = bs.center();
 		osg::Vec3 eyePos = bs.center() + osg::Vec3(0, bs.radius(), 0);
 		cameraManipulator->setHomePosition(eyePos, modelCenter, osg::Vec3(0, 0, 1));
+      */
 	}
 
 	// Exit if we do not have an HMD present
