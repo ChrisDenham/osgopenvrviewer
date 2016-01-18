@@ -20,7 +20,7 @@ void OpenVRUpdateSlaveCallback::updateSlave(osg::View& view, osg::View::Slave& s
 	osg::Matrix viewOffset = (m_cameraType == LEFT_CAMERA) ? m_device->viewMatrixLeft() : m_device->viewMatrixRight();
 
 	viewOffset.preMultRotate(orientation);
-   viewOffset.setTrans(position);
+	viewOffset.setTrans(position);
 
 	slave._viewOffset = viewOffset;
 
