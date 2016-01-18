@@ -28,7 +28,7 @@ public:
 			for (itr = events.begin(); itr != events.end(); ++itr)
 			{
 				osgGA::GUIEventAdapter* event = dynamic_cast<osgGA::GUIEventAdapter*>(itr->get());
-				if (event->getEventType() == osgGA::GUIEventAdapter::CLOSE_WINDOW)
+				if (event != nullptr && event->getEventType() == osgGA::GUIEventAdapter::CLOSE_WINDOW)
 				{
 					// We have "peeked" at the event queue for the GraphicsWindow and 
 					// found a CLOSE_WINDOW event. This would normally mean that OSG 
