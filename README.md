@@ -1,4 +1,8 @@
-﻿OsgOpenVRViewer
+***Please note:***
+Although I'm happy to merge sensible pull requests on this project, I am not actively using or maintaining it, and I have no current plans to test anything I merge. So, if there are any more active forks of this projects, it may be better to use them instead.
+Chris Denham
+
+OsgOpenVRViewer
 ===============
 
 An OsgViewer with support for viewing a scene graph on devices compatible with OpenVR/SteamVR 
